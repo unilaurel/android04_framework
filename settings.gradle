@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+    }
+}
+
+rootProject.name = "android04_framework"
+include ':app'
+include ':okhttp3'
+include ':eventbus'
+include ':eventbus2'
+include ':recycleview'
+include ':glide'
+include ':greendao'
+include ':webview'
+include ':baidumap'
+include ':imoocrestaurant'
+include ':testtest'

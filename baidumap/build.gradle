@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.imooc.baidumap0924'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.imooc.baidumap0924"
+        minSdk 33
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // 设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    signingConfigs{
+        releaseConfig{
+            storeFile file('imooc_ide_-2-6')
+            storePassword 'imooc123'
+            keyAlias 'android'
+            keyPassword 'imooc123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled enableAndroidTestCoverage
+            signingConfig signingConfigs.releaseConfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    implementation files('libs/BaiduLBS_Android.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Map:7.4.0'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Search:7.4.0'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Util:7.4.0'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Location_All:9.1.8'
+
+}

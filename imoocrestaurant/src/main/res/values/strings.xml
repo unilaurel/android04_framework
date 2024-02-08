@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Imooc_res</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_product_list">ProductListActivity</string>
+</resources>

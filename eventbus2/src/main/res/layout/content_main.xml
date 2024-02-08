@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/emotionImageView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Publisher:"/>
+        <TextView
+            android:id="@+id/publisherThreadTextView"
+            android:textColor="#00f"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Subscriber:"/>
+        <TextView
+            android:id="@+id/subscriberThreadTextView"
+            android:textColor="#f00"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
